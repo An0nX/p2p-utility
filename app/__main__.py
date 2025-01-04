@@ -18,4 +18,3 @@ app.include_router(video_stream.router, prefix="/stream", tags=["Video Stream"])
 
 if __name__ == "__main__":
     uvicorn.run(app, host=Config.HOST, port=Config.PORT)
-

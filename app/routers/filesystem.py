@@ -1,7 +1,8 @@
 """
 API Router for filesystem operations.
 
-This module provides endpoints for listing, downloading, uploading, and deleting files and directories.
+This module provides endpoints for listing, downloading, uploading, and deleting files and
+directories.
 """
 
 from fastapi import APIRouter, UploadFile, File
@@ -24,7 +25,8 @@ async def list_dir(path: str = "/"):
         path (str): Directory path. Defaults to "/".
 
     Returns:
-        dict: A dictionary with a single key, "files", which contains a list of files and directories.
+        dict: A dictionary with a single key, "files", which contains a list of files and
+            directories.
     """
     return {"files": list_directory(path)}
 
@@ -80,3 +82,4 @@ async def delete(path: str):
     """
     delete_path(path)
     return {"message": "Deleted successfully"}
+

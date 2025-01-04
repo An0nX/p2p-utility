@@ -39,5 +39,6 @@ async def video_stream_handler(request: Request):
         return StreamingResponse(io.BytesIO(video_data), media_type="video/mp4")
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error uploading video: {str(e)}") from e
-
+        raise HTTPException(
+            status_code=500, detail=f"Error uploading video: {str(e)}"
+        ) from e

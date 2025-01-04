@@ -83,4 +83,3 @@ def delete_path(path: str):
         os.remove(path)
     else:
         raise HTTPException(status_code=404, detail="Path not found")
-
