@@ -3,6 +3,19 @@ from fastapi.responses import StreamingResponse
 from io import BytesIO
 
 async def video_stream_handler(request: Request):
+    """
+    Handle streaming of video data from a request.
+
+    Args:
+        request (Request): The request containing the video data to be streamed.
+
+    Returns:
+        StreamingResponse: A response object streaming the video data with 'video/mp4' media type.
+
+    Raises:
+        HTTPException: If an error occurs while processing the video data.
+    """
+
     try:
         video_chunks = []
 

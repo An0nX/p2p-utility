@@ -23,8 +23,7 @@ async def test_video_upload_and_return():
 async def test_multiple_video_chunks():
     response = client.post(
         "/stream/",
-        content=video_chunk
-        * 3,
+        content=video_chunk * 3,
         headers={"Content-Type": "application/octet-stream"},
     )
 
@@ -58,4 +57,3 @@ async def test_large_video_chunk():
     assert response.status_code == 200
 
     assert response.content == large_chunk
-
