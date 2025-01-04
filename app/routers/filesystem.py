@@ -82,4 +82,3 @@ async def delete(path: str):
     """
     delete_path(path)
     return {"message": "Deleted successfully"}
-
