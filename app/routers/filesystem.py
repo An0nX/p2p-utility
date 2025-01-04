@@ -1,3 +1,9 @@
+"""
+API Router for filesystem operations.
+
+This module provides endpoints for listing, downloading, uploading, and deleting files and directories.
+"""
+
 from fastapi import APIRouter, UploadFile, File
 from app.services.fs_service import (
     list_directory,
@@ -37,7 +43,6 @@ async def download(path: str):
     Raises:
         HTTPException: If the file is not found at the given path.
     """
-
     return download_file(path)
 
 

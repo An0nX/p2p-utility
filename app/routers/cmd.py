@@ -1,3 +1,9 @@
+"""
+API Router for command execution.
+
+This module provides a single API endpoint for executing a system command.
+"""
+
 from fastapi import APIRouter, HTTPException
 from app.services.cmd_service import execute_command
 
@@ -23,4 +29,3 @@ async def run_command(data: dict):
     if not command:
         raise HTTPException(status_code=400, detail="No command provided")
     return await execute_command(command)
-

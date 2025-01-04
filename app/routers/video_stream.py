@@ -1,3 +1,9 @@
+"""
+API Router for video streaming.
+
+This module provides a single API endpoint for streaming video data.
+"""
+
 from fastapi import APIRouter, Request
 from app.services.video_service import video_stream_handler
 

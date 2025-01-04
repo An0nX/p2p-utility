@@ -1,3 +1,7 @@
+"""
+Module for executing system commands asynchronously.
+"""
+
 import subprocess
 
 
